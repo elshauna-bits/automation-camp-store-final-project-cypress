@@ -30,9 +30,10 @@ addOneItemToCart(){
 
 }
 addItemToCartTwice(){
-    cy.get(this.addQualityTruckerHat).click()
-    cy.get(this.addQualityTruckerHat).click()
+    cy.get(this.addQualityFittedHat).click()
+    cy.get(this.addQualityFittedHat).click()
 }
+
 addMultipleItemsToCart(){
     cy.get(this.addQualityFittedHat).click()
     cy.get(this.addQualityTruckerHat).click()
