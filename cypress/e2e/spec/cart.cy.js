@@ -15,5 +15,13 @@ describe('Cart interactions', ()=>{
         cart.increaseItemQuantity()
         cy.get(cart.itemAmount).should('have.text','2')
     })
+    it('should decrease item quantity',()=>{
+        products.addOneItemToCart()
+        cart.decreaseItemQuantity()
+        //cy.get(cart.itemAmount).should('have.text','2')
+
+        
+    })
+
 
 })

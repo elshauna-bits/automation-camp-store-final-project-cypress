@@ -1,4 +1,6 @@
-class Cart{
+
+
+class Cart {
     get cartIcon(){
       return('#top-cart')  
     }
@@ -24,10 +26,12 @@ class Cart{
        cy.get(this.increaseQuantity).click() 
     }
     decreaseItemQuantity(){
+        cy.wait(6000)
         cy.get(this.cartIcon).click()
         cy.get(this.decreaseQuantity).click()
     }
     deleteItemFromCart(){
+        cy.wait(6000)
         cy.get(this.cartIcon).click()
         cy.get(this.deleteItem).click()
     }
