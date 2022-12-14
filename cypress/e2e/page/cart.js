@@ -1,5 +1,3 @@
-
-
 class Cart {
     get cartIcon(){
       return('#top-cart')  
