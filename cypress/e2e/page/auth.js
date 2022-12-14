@@ -30,25 +30,25 @@ class Authenthication{
         cy.get(this.signInOrRegisterBtn).click()
     }
 
-    login(email,password){
-        cy.get(this.email).type(email)
-        cy.get(this.password).type(password)
-        cy.get(this.submitBtn).click()
-    }
-    // login() {
-    //     cy.visit("https://ui-automation-camp.vercel.app/");
-    //     cy.get("#signInOrRegister").click();
-    //     //Login on to site.
-    //     cy.origin(
-    //       "https://dev-mlluudmotpwoldtv.us.auth0.com",
-    //       { args: {} },
-    //       ({}) => {
-    //         cy.get('[type="email"]').type("test1@tester.com");
-    //         cy.get('[type="password"]').type("Password1", { log: false });
-    //         cy.get("[name=submit]").click();
-    //       }
-    //     );
-    //   }
+    // login(email,password){
+    //     cy.get(this.email).type(email)
+    //     cy.get(this.password).type(password)
+    //     cy.get(this.submitBtn).click()
+    // }
+    login() {
+        cy.visit("https://ui-automation-camp.vercel.app/");
+        cy.get("#signInOrRegister").click();
+        //Login on to site.
+        cy.origin(
+          "https://dev-mlluudmotpwoldtv.us.auth0.com",
+          { args: {} },
+          ({}) => {
+            cy.get('[type="email"]').type("test1@tester.com");
+            cy.get('[type="password"]').type("Password1", { log: false });
+            cy.get("[name=submit]").click();
+          }
+        );
+      }
     loginWithoutPassword(email){
         cy.get(this.email).type(email)
         cy.get(this.submitBtn).click()
