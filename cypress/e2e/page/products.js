@@ -37,7 +37,7 @@ addItemToCartTwice(){
 addMultipleItemsToCart(){
     cy.get(this.addQualityFittedHat).click()
     cy.get(this.addQualityTruckerHat).click()
-    cy.get(this.addQualityMousepad).click()
+    //cy.get(this.addQualityMousepad).click()
   
 }
 addtoCartAfterSearch(item){
