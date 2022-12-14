@@ -47,6 +47,9 @@ get successMessage(){
 get emailError(){
     return cy.get('.snipcart-field-error') 
 }
+get billingTitle(){
+    return("div[class='snipcart__box'] h1[class='snipcart__font--subtitle']")
+}
 
 
 checkoutProduct(fullName,email,streetAddress,aptOrSuite,city,country,provinceOrState,postalCode){
@@ -63,11 +66,12 @@ checkoutProduct(fullName,email,streetAddress,aptOrSuite,city,country,provinceOrS
     cy.get(this.postalCode).type(postalCode)
     //continuetoPaymentBtn.click()
 }
-payment(cardNumber,expiryDate,cvv){
-    cy.get(this.cardNumber).type(cardNumber)
-    cy.get(this.expiryDate).type(expiryDate)
-    cy.get(this.cvv).type(cvv)
-    cy.get(this.placeOrderBtn).click()
+payment(){
+    cy.iframe('.snipcart-payment-card-form iframe').find(this.cardNumber).type('4242 4242 4242 4242')
+    cy.iframe('.snipcart-payment-card-form iframe').find(this.expiryDate).type('1225')
+    cy.iframe('.snipcart-payment-card-form iframe').find(this.cvv).type('123')
+    //cy.get(this.placeOrderBtn).click()
+    cy.get('.snipcart-button-primary').click({force: true})
 }
 checkoutProductWithoutEmail(fullName,streetAddress,aptOrSuite,city,country,provinceOrState,postalCode){
     cy.wait(2000)
