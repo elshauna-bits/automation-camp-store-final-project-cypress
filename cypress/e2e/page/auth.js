@@ -30,11 +30,11 @@ class Authenthication{
         cy.get(this.signInOrRegisterBtn).click()
     }
 
-    // login(email,password){
-    //     cy.get(this.email).type(email)
-    //     cy.get(this.password).type(password)
-    //     cy.get(this.submitBtn).click()
-    // }
+    tryLogin(email,password){
+        cy.get(this.email).type(email)
+        cy.get(this.password).type(password)
+        cy.get(this.submitBtn).click()
+    }
     login() {
         cy.visit("https://ui-automation-camp.vercel.app/");
         cy.get("#signInOrRegister").click();
