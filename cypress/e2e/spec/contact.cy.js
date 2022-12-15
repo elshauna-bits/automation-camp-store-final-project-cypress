@@ -10,11 +10,11 @@ describe('Contact Page',()=>{
         cy.get(contact.contactPage).click()
         cy.wait(5000)
     })
-    xit('should verify that the email address is correct',()=>{
+    it('should verify that the email address is correct',()=>{
 
         cy.get(contact.emailAddress).should('have.text','info@qualityworkscg.com')// should verify that the email address on the contact page is correct
     })
-    xit('should send a message',()=>{
+    it('should send a message',()=>{
         contact.sendMessage("Ky","Levy","kylev@mail.com","Bootcamp","When does it start?")// sends  a message 
         cy.wait(5000)
         cy.get(contact.confirmation).should('be.visible')//checks if the message sent notification is visiblw
