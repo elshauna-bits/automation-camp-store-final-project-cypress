@@ -7,7 +7,8 @@ module.exports = defineConfig({
     },
     "chromeWebSecurity":false,
     baseUrl:'https://ui-automation-camp.vercel.app/',
-    specPattern: 'cypress/e2e/**/*.cy.{js,jsx,ts,tsx}',
+    specPattern: 'cypress/e2e/**/*.cy.{js,jsx,ts,tsx}'
+    }, 
     //For reports
     reporter: 'mochawesome',
     reporterOptions: {
@@ -15,7 +16,5 @@ module.exports = defineConfig({
     overwrite: false,
     html: false,
     json: true
-    
-    } 
   },
 });
