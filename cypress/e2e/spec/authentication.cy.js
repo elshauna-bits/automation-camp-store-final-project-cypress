@@ -1,7 +1,9 @@
 import auth from "../page/auth"
 describe('Authenthication',()=>{
     beforeEach(()=>{
-        auth.login()
+        cy.visit('/')
+        cy.wait(3000)
+        auth.signInOrRegister()
     })
     xit('should create an account for the application',()=>{
        auth.signUp('pain@mail.com','P@$$w0rd!')// registering a new account

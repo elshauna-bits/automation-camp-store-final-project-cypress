@@ -1,0 +1,148 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2022-12-15T23:10:27.387Z",
+    "end": "2022-12-15T23:10:34.670Z",
+    "duration": 7283,
+    "testsRegistered": 3,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 2,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "132333dd-4ba5-46bc-8edd-c1fbba8215cd",
+      "title": "",
+      "fullFile": "cypress\\e2e\\spec\\contact.cy.js",
+      "file": "cypress\\e2e\\spec\\contact.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "f1ec50e5-ae27-4742-8900-93bd7b0788ae",
+          "title": "Contact Page",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should verify that the email address is correct",
+              "fullTitle": "Contact Page should verify that the email address is correct",
+              "timedOut": null,
+              "duration": 7226,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(_contactPage.default.emailAddress).should('have.text', 'info@qualityworkscg.com'); // should verify that the email address on the contact page is correct",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: expected 'https://dev-mlluudmotpwoldtv.us.auth0.com/login?state=hKFo2SA1VFZEeWdOcG96Mm1pM3ROaHFzZVYtd3ZGNXE1UF91Z6FupWxvZ2luo3RpZNkgSjVvcGw4ZGlNV1lPMFZ6VGRmUnVwdUhhS0hzdHVJV2OjY2lk2SBHbzVxVW16cTFLcWNnTzFIUVdNbWI5ZHFxRFVEOElQdQ&client=Go5qUmzq1KqcgO1HQWMmb9dqqDUD8IPu&protocol=oauth2&scope=openid%20profile%20email&response_type=code&redirect_uri=https%3A%2F%2Fui-automation-camp.vercel.app%2Fapi%2Fauth%2Fcallback&nonce=lWNQue7a8z_ViFEkxPdf2wMnmFwehyygwXBqPtWLzYY&code_challenge=hJeLv-574rFegHWxB4sWWIsCzgCRxEF1UTRLy1QoKh0&code_challenge_method=S256' to equal 'https://ui-automation-camp.vercel.app/products'\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Contact Page`",
+                "estack": "AssertionError: Timed out retrying after 4000ms: expected 'https://dev-mlluudmotpwoldtv.us.auth0.com/login?state=hKFo2SA1VFZEeWdOcG96Mm1pM3ROaHFzZVYtd3ZGNXE1UF91Z6FupWxvZ2luo3RpZNkgSjVvcGw4ZGlNV1lPMFZ6VGRmUnVwdUhhS0hzdHVJV2OjY2lk2SBHbzVxVW16cTFLcWNnTzFIUVdNbWI5ZHFxRFVEOElQdQ&client=Go5qUmzq1KqcgO1HQWMmb9dqqDUD8IPu&protocol=oauth2&scope=openid%20profile%20email&response_type=code&redirect_uri=https%3A%2F%2Fui-automation-camp.vercel.app%2Fapi%2Fauth%2Fcallback&nonce=lWNQue7a8z_ViFEkxPdf2wMnmFwehyygwXBqPtWLzYY&code_challenge=hJeLv-574rFegHWxB4sWWIsCzgCRxEF1UTRLy1QoKh0&code_challenge_method=S256' to equal 'https://ui-automation-camp.vercel.app/products'\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Contact Page`\n    at Context.eval (webpack:///./cypress/e2e/spec/contact.cy.js:9:17)",
+                "diff": "- '\\'https://dev-mlluudmotpwoldtv.us.auth0.com/login?state=hKFo2SA1VFZEeWdOcG96Mm1pM3ROaHFzZVYtd3ZGNXE1UF91Z6FupWxvZ2luo3RpZNkgSjVvcGw4ZGlNV1lPMFZ6VGRmUnVwdUhhS0hzdHVJV2OjY2lk2SBHbzVxVW16cTFLcWNnTzFIUVdNbWI5ZHFxRFVEOElQdQ&client=Go5qUmzq1KqcgO1HQWMmb9dqqDUD8IPu&protocol=oauth2&scope=openid%20profile%20email&response_type=code&redirect_uri=https%3A%2F%2Fui-automation-camp.vercel.app%2Fapi%2Fauth%2Fcallback&nonce=lWNQue7a8z_ViFEkxPdf2wMnmFwehyygwXBqPtWLzYY&code_challenge=hJeLv-574rFegHWxB4sWWIsCzgCRxEF1UTRLy1QoKh0&code_challenge_method=S256\\''\n+ '\\'https://ui-automation-camp.vercel.app/products\\''\n"
+              },
+              "uuid": "b4df88c2-d1c4-413d-878c-b1180c6e062c",
+              "parentUUID": "f1ec50e5-ae27-4742-8900-93bd7b0788ae",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should send a message",
+              "fullTitle": "Contact Page should send a message",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_contactPage.default.sendMessage(\"Ky\", \"Levy\", \"kylev@mail.com\", \"Bootcamp\", \"When does it start?\"); // sends  a message \n\ncy.wait(5000);\ncy.get(_contactPage.default.confirmation).should('be.visible'); //checks if the message sent notification is visiblw",
+              "err": {},
+              "uuid": "8a525c36-43d0-4af6-9814-3cdc739e03c0",
+              "parentUUID": "f1ec50e5-ae27-4742-8900-93bd7b0788ae",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "should not send a message without email",
+              "fullTitle": "Contact Page should not send a message without email",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_contactPage.default.sendMessageWithoutEmail(\"Ky\", \"Levy\", \"Bootcamp\", \"When does it start?\"); // should try to send a message without an email address\n\ncy.wait(5000);\ncy.get(_contactPage.default.emailField).should('have.text', 'Field is required!'); //should check if an error message is displayed",
+              "err": {},
+              "uuid": "a2a3c3e7-beaa-45a0-a1dd-8f1a13f43a5f",
+              "parentUUID": "f1ec50e5-ae27-4742-8900-93bd7b0788ae",
+              "isHook": false,
+              "skipped": true
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "b4df88c2-d1c4-413d-878c-b1180c6e062c"
+          ],
+          "pending": [],
+          "skipped": [
+            "8a525c36-43d0-4af6-9814-3cdc739e03c0",
+            "a2a3c3e7-beaa-45a0-a1dd-8f1a13f43a5f"
+          ],
+          "duration": 7226,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

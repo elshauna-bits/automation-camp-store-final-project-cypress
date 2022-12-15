@@ -1,0 +1,148 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 2,
+    "failures": -1,
+    "start": "2022-12-15T23:01:44.479Z",
+    "end": "2022-12-15T23:01:52.085Z",
+    "duration": 7606,
+    "testsRegistered": 3,
+    "passPercent": 0,
+    "pendingPercent": 66.66666666666666,
+    "other": 2,
+    "hasOther": true,
+    "skipped": 2,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "5c52d81b-8410-4e44-aaa6-a42450199767",
+      "title": "",
+      "fullFile": "cypress\\e2e\\spec\\checkout.cy.js",
+      "file": "cypress\\e2e\\spec\\checkout.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "277765be-4746-4a4f-8cb8-383489bbd2dd",
+          "title": "Checkout products",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should checkout one product",
+              "fullTitle": "Checkout products should checkout one product",
+              "timedOut": null,
+              "duration": 0,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_products.default.addOneItemToCart();\ncy.wait(3000);\n_checkout.default.checkoutProduct(\"Mia Miller\", \"mm@mail.com\", \"34 Daisy Street\", \"1\", \"Raleigh\", \"Jamaica\", \"Kingston\", \"27607\");\ncy.wait(2000);\n_checkout.default.continuetoPaymentBtn.click({\n  force: true\n});\ncy.wait(4000);\n_checkout.default.payment();\ncy.get(_checkout.default.successMessage).should('have.text', 'Thank you for your order');",
+              "err": {},
+              "uuid": "664b430c-4a5d-43a0-aeee-5671669ad846",
+              "parentUUID": "277765be-4746-4a4f-8cb8-383489bbd2dd",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "should checkout multiple products",
+              "fullTitle": "Checkout products should checkout multiple products",
+              "timedOut": null,
+              "duration": 0,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_products.default.addMultipleItemsToCart();\ncy.wait(3000);\n_checkout.default.checkoutProduct(\"Mia Miller\", \"mm@mail.com\", \"34 Daisy Street\", \"1\", \"Raleigh\", \"Jamaica\", \"Kingston\", \"27607\");\ncy.wait(2000);\n_checkout.default.continuetoPaymentBtn.click({\n  force: true\n});\ncy.wait(4000);\n_checkout.default.payment();\ncy.get(_checkout.default.successMessage).should('have.text', 'Thank you for your order');",
+              "err": {},
+              "uuid": "32c90118-c8a2-41fb-8c3d-583d5c23e5b7",
+              "parentUUID": "277765be-4746-4a4f-8cb8-383489bbd2dd",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "should not checkout without email address",
+              "fullTitle": "Checkout products should not checkout without email address",
+              "timedOut": null,
+              "duration": 7490,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "_products.default.addOneItemToCart();\n_checkout.default.checkoutProductWithoutEmail(\"Lois King\", \"33 Free Lane\", '4', \"Portmore\", \"Jamaica\", \"St. Catherine\", \"34552\");\n_checkout.default.continuetoPaymentBtn.click({\n  force: true\n});\ncy.wait(6000);\ncy.get(_checkout.default.emailError).should('have.text', 'This field is required'); //cy.get(checkout.billingTitle).should('have.text','Billing')",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `[type=email]`, but never found it.\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Checkout products`",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `[type=email]`, but never found it.\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Checkout products`\n    at Authenthication.login (webpack:///./cypress/e2e/page/auth.js:34:11)\n    at Context.eval (webpack:///./cypress/e2e/spec/checkout.cy.js:10:13)",
+                "diff": null
+              },
+              "uuid": "5ea205bd-71e9-4e5c-86da-79cd5365b2c4",
+              "parentUUID": "277765be-4746-4a4f-8cb8-383489bbd2dd",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "5ea205bd-71e9-4e5c-86da-79cd5365b2c4"
+          ],
+          "pending": [],
+          "skipped": [
+            "664b430c-4a5d-43a0-aeee-5671669ad846",
+            "32c90118-c8a2-41fb-8c3d-583d5c23e5b7"
+          ],
+          "duration": 7490,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

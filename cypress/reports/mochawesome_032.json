@@ -1,0 +1,148 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2022-12-15T23:10:38.608Z",
+    "end": "2022-12-15T23:10:42.379Z",
+    "duration": 3771,
+    "testsRegistered": 3,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 2,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "b85d93bc-7a17-4293-9f73-04227a50560a",
+      "title": "",
+      "fullFile": "cypress\\e2e\\spec\\filter-and-sort.cy.js",
+      "file": "cypress\\e2e\\spec\\filter-and-sort.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "58cf542f-f203-4a78-ac74-bd9303c6c2dd",
+          "title": "Filter and sort products",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should sort from A to Z",
+              "fullTitle": "Filter and sort products should sort from A to Z",
+              "timedOut": null,
+              "duration": 3697,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(_products.default.sortSelect).select('aToZ');\nconst qualityProducts = ['Quality Stylish Shoes', 'Dell Laptop', 'Gray Couch', 'HP Laptop', 'Mackbook Pro', 'Quality Blue Shoes', 'Quality Cargo Pants', 'Quality Fitted Hat', 'Quality Heal Shoes', 'Quality Hooded Sweatshirt', 'Quality Jeans Pants', 'Quality Kids Tshirt', 'Quality Trucker Hat', 'Quality Mousepad', 'Quality Mug', 'Quality Pillow', 'Quality Pink Pants', 'Red Couch', 'Quality Sweatshirt', 'Quality Tshirt', 'Quality Vneck', 'White Couch'];\nqualityProducts.sort();\ncy.wait(5000);\ncy.get(_sort.default.productNames).each(($elem, index) => {\n  expect($elem.text()).equal(qualityProducts[index]);\n});",
+              "err": {
+                "message": "CypressError: `cy.origin()` requires enabling the experimentalSessionAndOrigin flag\n\nhttps://on.cypress.io/origin\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Filter and sort products`",
+                "estack": "CypressError: `cy.origin()` requires enabling the experimentalSessionAndOrigin flag\n\nhttps://on.cypress.io/origin\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Filter and sort products`\n    at Context.origin (https://ui-automation-camp.vercel.app/__cypress/runner/cypress_runner.js:142525:78)\n    at wrapped (https://ui-automation-camp.vercel.app/__cypress/runner/cypress_runner.js:157849:43)\nFrom Your Spec Code:\n    at Authenthication.login (webpack:///./cypress/e2e/page/auth.js:42:11)\n    at Context.eval (webpack:///./cypress/e2e/spec/filter-and-sort.cy.js:8:13)",
+                "diff": null
+              },
+              "uuid": "3d87383f-b65b-4a59-8be7-a92b389b225e",
+              "parentUUID": "58cf542f-f203-4a78-ac74-bd9303c6c2dd",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should sort from Z to A",
+              "fullTitle": "Filter and sort products should sort from Z to A",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(_products.default.sortSelect).select('zToA');\nconst qualityProducts = ['Dell Laptop', 'Gray Couch', 'HP Laptop', 'Mackbook Pro', 'Quality Blue Shoes', 'Quality Cargo Pants', 'Quality Fitted Hat', 'Quality Heal Shoes', 'Quality Hooded Sweatshirt', 'Quality Jeans Pants', 'Quality Kids Tshirt', 'Quality Mousepad', 'Quality Mug', 'Quality Pillow', 'Quality Pink Pants', 'Quality Stylish Shoes', 'Quality Sweatshirt', 'Quality Trucker Hat', 'Quality Tshirt', 'Quality Vneck', 'Red Couch', 'White Couch'];\nqualityProducts.sort().reverse();\ncy.wait(5000);\ncy.get(_sort.default.productNames).each(($elem, index) => {\n  expect($elem.text()).equal(qualityProducts[index]);\n});",
+              "err": {},
+              "uuid": "b865cee2-2088-485d-8546-f619ea550c0c",
+              "parentUUID": "58cf542f-f203-4a78-ac74-bd9303c6c2dd",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "should filter by category",
+              "fullTitle": "Filter and sort products should filter by category",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(_products.default.categorySelect).select('laptop'); // selects the laptop option in the category field\nconst laptops = [\"Mackbook Pro\", \"Dell Laptop\", \"HP Laptop\"];\ncy.wait(5000);\ncy.get(_sort.default.productNames).each(($elem, index) => {\n  expect($elem.text()).equal(laptops[index]);\n});",
+              "err": {},
+              "uuid": "ceef0e0e-eb5b-4247-b473-25daf0a31c8c",
+              "parentUUID": "58cf542f-f203-4a78-ac74-bd9303c6c2dd",
+              "isHook": false,
+              "skipped": true
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "3d87383f-b65b-4a59-8be7-a92b389b225e"
+          ],
+          "pending": [],
+          "skipped": [
+            "b865cee2-2088-485d-8546-f619ea550c0c",
+            "ceef0e0e-eb5b-4247-b473-25daf0a31c8c"
+          ],
+          "duration": 3697,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
