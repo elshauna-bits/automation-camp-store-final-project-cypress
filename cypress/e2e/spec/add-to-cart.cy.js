@@ -5,7 +5,7 @@ describe('Add items to cart',()=>{
     beforeEach(()=>{
         cy.visit('/')
         auth.signInOrRegister()
-        auth.login("pain@mail.com","P@$$w0rd!")
+        //auth.login("pain@mail.com","P@$$w0rd!")
         cy.url().should('eq','https://ui-automation-camp.vercel.app/products')
     }) 
     it('should add one item to cart',()=>{

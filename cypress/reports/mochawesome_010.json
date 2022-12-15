@@ -1,0 +1,224 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 5,
+    "failures": -4,
+    "start": "2022-12-15T23:01:26.173Z",
+    "end": "2022-12-15T23:01:30.466Z",
+    "duration": 4293,
+    "testsRegistered": 7,
+    "passPercent": 0,
+    "pendingPercent": 71.42857142857143,
+    "other": 5,
+    "hasOther": true,
+    "skipped": 6,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "7bb19f84-b6db-4c2d-b89b-d5e7870ff751",
+      "title": "",
+      "fullFile": "cypress\\e2e\\spec\\authentication.cy.js",
+      "file": "cypress\\e2e\\spec\\authentication.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "92df6a98-e730-4329-b478-eeeaf0c8b418",
+          "title": "Authenthication",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should create an account for the application",
+              "fullTitle": "Authenthication should create an account for the application",
+              "timedOut": null,
+              "duration": 0,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_auth.default.signUp('pain@mail.com', 'P@$$w0rd!'); // registering a new account",
+              "err": {},
+              "uuid": "d3faeec0-2b0b-413e-9f79-c7ec708e9d27",
+              "parentUUID": "92df6a98-e730-4329-b478-eeeaf0c8b418",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "should login into the application",
+              "fullTitle": "Authenthication should login into the application",
+              "timedOut": null,
+              "duration": 0,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_auth.default.login(\"pain@mail.com\", \"P@$$w0rd!\");\ncy.url().should('eq', 'https://ui-automation-camp.vercel.app/products'); // asserts that the user is taken to the products page after login",
+              "err": {},
+              "uuid": "de9c0e8e-8817-432d-a257-720d2126fa4c",
+              "parentUUID": "92df6a98-e730-4329-b478-eeeaf0c8b418",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "should not login with incorrect password",
+              "fullTitle": "Authenthication should not login with incorrect password",
+              "timedOut": null,
+              "duration": 0,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_auth.default.login(\"ellen@mail.com\", \"P@$$w0rd\"); // attempts to login with an incorrect password\n\ncy.get(_auth.default.errorMessage).should('have.text', 'Wrong email or password.'); // asserts that the user is prompted with an error message",
+              "err": {},
+              "uuid": "2888ec2f-3f1f-4fd1-b190-fb8747c1ac7c",
+              "parentUUID": "92df6a98-e730-4329-b478-eeeaf0c8b418",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "should not login with incorrect email",
+              "fullTitle": "Authenthication should not login with incorrect email",
+              "timedOut": null,
+              "duration": 0,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_auth.default.login(\"ell77en@mail.com\", \"P@$$w0rd!\"); // attempts to login with an incorrect email \n\ncy.get(_auth.default.errorMessage).should('have.text', 'Wrong email or password.'); // asserts that the user is prompted with an error message",
+              "err": {},
+              "uuid": "b7d77122-9edc-44b6-940c-24f822b53997",
+              "parentUUID": "92df6a98-e730-4329-b478-eeeaf0c8b418",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "should not login with invalid email",
+              "fullTitle": "Authenthication should not login with invalid email",
+              "timedOut": null,
+              "duration": 0,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_auth.default.login(\"e7en@mail\", \"P@$$w0rd!\"); //attempts to login with an invalid email\n\ncy.get(_auth.default.invalidCredError).should('have.text', 'Email is invalid'); // asserts that the user is prompted with an error message",
+              "err": {},
+              "uuid": "6f96a41d-61c3-4189-860d-d9708e0ea8a7",
+              "parentUUID": "92df6a98-e730-4329-b478-eeeaf0c8b418",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "should not create an account for the application without password",
+              "fullTitle": "Authenthication should not create an account for the application without password",
+              "timedOut": null,
+              "duration": 4206,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "_auth.default.signUpWithoutPassword('ellen@mail.com'); // attempts to create an account without a password\n\ncy.get(_auth.default.invalidCredError).should('have.text', \"Password can't be blank\"); // asserts that the user is prompted with an error message",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `[type=email]`, but never found it.\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Authenthication`",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `[type=email]`, but never found it.\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Authenthication`\n    at Authenthication.login (webpack:///./cypress/e2e/page/auth.js:34:11)\n    at Context.eval (webpack:///./cypress/e2e/spec/authentication.cy.js:4:13)",
+                "diff": null
+              },
+              "uuid": "918b0f49-4bd9-4cf9-b6b2-2ada7ed3e2c9",
+              "parentUUID": "92df6a98-e730-4329-b478-eeeaf0c8b418",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should not login without password",
+              "fullTitle": "Authenthication should not login without password",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_auth.default.loginWithoutPassword(\"pain@mail.com\"); // attempts to login without password\n\ncy.get(_auth.default.invalidCredError).should('have.text', \"Password can't be blank\"); // asserts that the user is prompted with an error message",
+              "err": {},
+              "uuid": "d7fb502f-781e-44d0-8fe6-f3e9a5da2d9f",
+              "parentUUID": "92df6a98-e730-4329-b478-eeeaf0c8b418",
+              "isHook": false,
+              "skipped": true
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "918b0f49-4bd9-4cf9-b6b2-2ada7ed3e2c9"
+          ],
+          "pending": [],
+          "skipped": [
+            "d3faeec0-2b0b-413e-9f79-c7ec708e9d27",
+            "de9c0e8e-8817-432d-a257-720d2126fa4c",
+            "2888ec2f-3f1f-4fd1-b190-fb8747c1ac7c",
+            "b7d77122-9edc-44b6-940c-24f822b53997",
+            "6f96a41d-61c3-4189-860d-d9708e0ea8a7",
+            "d7fb502f-781e-44d0-8fe6-f3e9a5da2d9f"
+          ],
+          "duration": 4206,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

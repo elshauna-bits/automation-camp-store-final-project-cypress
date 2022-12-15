@@ -1,0 +1,148 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2022-12-15T23:10:04.227Z",
+    "end": "2022-12-15T23:10:11.581Z",
+    "duration": 7354,
+    "testsRegistered": 3,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 2,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "9116a252-00a2-4c7b-8794-094a7a03faec",
+      "title": "",
+      "fullFile": "cypress\\e2e\\spec\\cart.cy.js",
+      "file": "cypress\\e2e\\spec\\cart.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "24a61cba-a54a-4906-86fb-a77d1ed32baf",
+          "title": "Cart interactions",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should increase item quantity",
+              "fullTitle": "Cart interactions should increase item quantity",
+              "timedOut": null,
+              "duration": 7293,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "_products.default.addOneItemToCart(); //cy.get(cart.itemAmount).should('have.text','1')\n\n_cart.default.increaseItemQuantity();\ncy.get(_cart.default.itemAmount).should('have.text', '2');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: expected 'https://dev-mlluudmotpwoldtv.us.auth0.com/login?state=hKFo2SBsYjdzc2pZTzluYXVEa3FnWXNDcmExN2NWTXk3WUVxMaFupWxvZ2luo3RpZNkgYnh0UjlkUjNfMTI0MFc2Wk1KMTJJSV9oZkV5QnRxMGWjY2lk2SBHbzVxVW16cTFLcWNnTzFIUVdNbWI5ZHFxRFVEOElQdQ&client=Go5qUmzq1KqcgO1HQWMmb9dqqDUD8IPu&protocol=oauth2&scope=openid%20profile%20email&response_type=code&redirect_uri=https%3A%2F%2Fui-automation-camp.vercel.app%2Fapi%2Fauth%2Fcallback&nonce=vdEENZzoSNYUWLCQ6OIasOZTOtZKIIuRCe3iNtLa4EU&code_challenge=resnXA0hohZSPDpXoUdxWvvvbGlQ8XJR92ecfz-EgX8&code_challenge_method=S256' to equal 'https://ui-automation-camp.vercel.app/products'\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Cart interactions`",
+                "estack": "AssertionError: Timed out retrying after 4000ms: expected 'https://dev-mlluudmotpwoldtv.us.auth0.com/login?state=hKFo2SBsYjdzc2pZTzluYXVEa3FnWXNDcmExN2NWTXk3WUVxMaFupWxvZ2luo3RpZNkgYnh0UjlkUjNfMTI0MFc2Wk1KMTJJSV9oZkV5QnRxMGWjY2lk2SBHbzVxVW16cTFLcWNnTzFIUVdNbWI5ZHFxRFVEOElQdQ&client=Go5qUmzq1KqcgO1HQWMmb9dqqDUD8IPu&protocol=oauth2&scope=openid%20profile%20email&response_type=code&redirect_uri=https%3A%2F%2Fui-automation-camp.vercel.app%2Fapi%2Fauth%2Fcallback&nonce=vdEENZzoSNYUWLCQ6OIasOZTOtZKIIuRCe3iNtLa4EU&code_challenge=resnXA0hohZSPDpXoUdxWvvvbGlQ8XJR92ecfz-EgX8&code_challenge_method=S256' to equal 'https://ui-automation-camp.vercel.app/products'\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Cart interactions`\n    at Context.eval (webpack:///./cypress/e2e/spec/cart.cy.js:10:17)",
+                "diff": "- '\\'https://dev-mlluudmotpwoldtv.us.auth0.com/login?state=hKFo2SBsYjdzc2pZTzluYXVEa3FnWXNDcmExN2NWTXk3WUVxMaFupWxvZ2luo3RpZNkgYnh0UjlkUjNfMTI0MFc2Wk1KMTJJSV9oZkV5QnRxMGWjY2lk2SBHbzVxVW16cTFLcWNnTzFIUVdNbWI5ZHFxRFVEOElQdQ&client=Go5qUmzq1KqcgO1HQWMmb9dqqDUD8IPu&protocol=oauth2&scope=openid%20profile%20email&response_type=code&redirect_uri=https%3A%2F%2Fui-automation-camp.vercel.app%2Fapi%2Fauth%2Fcallback&nonce=vdEENZzoSNYUWLCQ6OIasOZTOtZKIIuRCe3iNtLa4EU&code_challenge=resnXA0hohZSPDpXoUdxWvvvbGlQ8XJR92ecfz-EgX8&code_challenge_method=S256\\''\n+ '\\'https://ui-automation-camp.vercel.app/products\\''\n"
+              },
+              "uuid": "9fadd909-3a75-4917-8818-041b68cbdffb",
+              "parentUUID": "24a61cba-a54a-4906-86fb-a77d1ed32baf",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should decrease item quantity",
+              "fullTitle": "Cart interactions should decrease item quantity",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_products.default.addItemToCartTwice(); //cy.get(cart.itemAmount).should('have.text','2')\n\n_cart.default.decreaseItemQuantity();\ncy.get(_cart.default.itemAmount).should('have.text', '1');",
+              "err": {},
+              "uuid": "f603fec2-e7ca-4983-8c26-3f81004db4f0",
+              "parentUUID": "24a61cba-a54a-4906-86fb-a77d1ed32baf",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "should delete item from cart",
+              "fullTitle": "Cart interactions should delete item from cart",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_products.default.addOneItemToCart(); //cy.wait(6000)\n//cy.get(cart.itemAmount).should('have.text','1')\n\n_cart.default.deleteItemFromCart();\ncy.get(_cart.default.cartItem).should('not.exist');",
+              "err": {},
+              "uuid": "0ab648e8-122f-40fd-bc80-d657e3016c5c",
+              "parentUUID": "24a61cba-a54a-4906-86fb-a77d1ed32baf",
+              "isHook": false,
+              "skipped": true
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "9fadd909-3a75-4917-8818-041b68cbdffb"
+          ],
+          "pending": [],
+          "skipped": [
+            "f603fec2-e7ca-4983-8c26-3f81004db4f0",
+            "0ab648e8-122f-40fd-bc80-d657e3016c5c"
+          ],
+          "duration": 7293,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

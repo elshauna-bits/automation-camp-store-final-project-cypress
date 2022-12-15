@@ -1,0 +1,148 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2022-12-15T23:02:37.373Z",
+    "end": "2022-12-15T23:02:44.328Z",
+    "duration": 6955,
+    "testsRegistered": 3,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 2,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "611ab3b0-7710-426e-83d5-3121fc104059",
+      "title": "",
+      "fullFile": "cypress\\e2e\\spec\\search.cy.js",
+      "file": "cypress\\e2e\\spec\\search.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "1d16c6d8-ceb9-4feb-a1aa-ea0e54fc00d0",
+          "title": "Search for products",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should search for an item which returns one result",
+              "fullTitle": "Search for products should search for an item which returns one result",
+              "timedOut": null,
+              "duration": 6878,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(_products.default.searchOpt).type('mug'); //should search for a product with mug in the name\ncy.get(_sort.default.productNames).should('have.text', 'Quality Mug'); // should verify that the result was Quality Mug",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `[type=email]`, but never found it.\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Search for products`",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `[type=email]`, but never found it.\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Search for products`\n    at Authenthication.login (webpack:///./cypress/e2e/page/auth.js:34:11)\n    at Context.eval (webpack:///./cypress/e2e/spec/search.cy.js:9:13)",
+                "diff": null
+              },
+              "uuid": "ca68d394-de2e-475b-8d1e-7171994a397f",
+              "parentUUID": "1d16c6d8-ceb9-4feb-a1aa-ea0e54fc00d0",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should search for an item which returns multiple results",
+              "fullTitle": "Search for products should search for an item which returns multiple results",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(_products.default.searchOpt).type('shoes'); //should search for a product with shoes in the name\nconst shoes = ['Quality Blue Shoes', 'Quality Stylish Shoes', 'Quality Heal Shoes']; // creates an array of the expected results\n//verifies that the results are as expected\ncy.get(_sort.default.productNames).each(($elem, index) => {\n  expect($elem.text()).equal(shoes[index]);\n});",
+              "err": {},
+              "uuid": "0e911077-447a-49a4-ab64-29aa533098f6",
+              "parentUUID": "1d16c6d8-ceb9-4feb-a1aa-ea0e54fc00d0",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "should return products when partial word is searched",
+              "fullTitle": "Search for products should return products when partial word is searched",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(_products.default.searchOpt).type('ed');\nconst results = ['Quality Fitted Hat', 'Quality Hooded Sweatshirt', 'Red Couch']; // creates an array of the expected results\n//verifies that the results are as expected\ncy.get(_sort.default.productNames).each(($elem, index) => {\n  expect($elem.text()).equal(results[index]);\n});",
+              "err": {},
+              "uuid": "aaa38988-f9ab-4ab6-b6c8-9e43bc8c466a",
+              "parentUUID": "1d16c6d8-ceb9-4feb-a1aa-ea0e54fc00d0",
+              "isHook": false,
+              "skipped": true
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "ca68d394-de2e-475b-8d1e-7171994a397f"
+          ],
+          "pending": [],
+          "skipped": [
+            "0e911077-447a-49a4-ab64-29aa533098f6",
+            "aaa38988-f9ab-4ab6-b6c8-9e43bc8c466a"
+          ],
+          "duration": 6878,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

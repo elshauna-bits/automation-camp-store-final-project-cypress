@@ -1,0 +1,148 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 2,
+    "failures": -1,
+    "start": "2022-12-15T22:55:02.632Z",
+    "end": "2022-12-15T22:55:11.138Z",
+    "duration": 8506,
+    "testsRegistered": 3,
+    "passPercent": 0,
+    "pendingPercent": 66.66666666666666,
+    "other": 2,
+    "hasOther": true,
+    "skipped": 2,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "dbc8a69f-3fb6-4b91-a14b-d8c7d85cdb10",
+      "title": "",
+      "fullFile": "cypress\\e2e\\spec\\checkout.cy.js",
+      "file": "cypress\\e2e\\spec\\checkout.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "ff8cc3be-b5dc-4a28-a7b9-fd767c0a97fc",
+          "title": "Checkout products",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should checkout one product",
+              "fullTitle": "Checkout products should checkout one product",
+              "timedOut": null,
+              "duration": 0,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_products.default.addOneItemToCart();\ncy.wait(3000);\n_checkout.default.checkoutProduct(\"Mia Miller\", \"mm@mail.com\", \"34 Daisy Street\", \"1\", \"Raleigh\", \"Jamaica\", \"Kingston\", \"27607\");\ncy.wait(2000);\n_checkout.default.continuetoPaymentBtn.click({\n  force: true\n});\ncy.wait(4000);\n_checkout.default.payment();\ncy.get(_checkout.default.successMessage).should('have.text', 'Thank you for your order');",
+              "err": {},
+              "uuid": "dfdc404a-8c34-41cd-9945-03daf11138d3",
+              "parentUUID": "ff8cc3be-b5dc-4a28-a7b9-fd767c0a97fc",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "should checkout multiple products",
+              "fullTitle": "Checkout products should checkout multiple products",
+              "timedOut": null,
+              "duration": 0,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_products.default.addMultipleItemsToCart();\ncy.wait(3000);\n_checkout.default.checkoutProduct(\"Mia Miller\", \"mm@mail.com\", \"34 Daisy Street\", \"1\", \"Raleigh\", \"Jamaica\", \"Kingston\", \"27607\");\ncy.wait(2000);\n_checkout.default.continuetoPaymentBtn.click({\n  force: true\n});\ncy.wait(4000);\n_checkout.default.payment();\ncy.get(_checkout.default.successMessage).should('have.text', 'Thank you for your order');",
+              "err": {},
+              "uuid": "8bead9bc-704a-4298-8158-0b842b79ea97",
+              "parentUUID": "ff8cc3be-b5dc-4a28-a7b9-fd767c0a97fc",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "should not checkout without email address",
+              "fullTitle": "Checkout products should not checkout without email address",
+              "timedOut": null,
+              "duration": 8433,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "_products.default.addOneItemToCart();\n_checkout.default.checkoutProductWithoutEmail(\"Lois King\", \"33 Free Lane\", '4', \"Portmore\", \"Jamaica\", \"St. Catherine\", \"34552\");\n_checkout.default.continuetoPaymentBtn.click({\n  force: true\n});\ncy.wait(6000);\ncy.get(_checkout.default.emailError).should('have.text', 'This field is required'); //cy.get(checkout.billingTitle).should('have.text','Billing')",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: expected 'https://dev-mlluudmotpwoldtv.us.auth0.com/login?state=hKFo2SB4SXNZWlNyVFZtcnRMVks0ZDZ4cjFrcG5UWVpKWVF4T6FupWxvZ2luo3RpZNkgb3NXSzg5OUlLRWJHZ0xGejNsRzJSb2dXQUV4UHh3N2WjY2lk2SBHbzVxVW16cTFLcWNnTzFIUVdNbWI5ZHFxRFVEOElQdQ&client=Go5qUmzq1KqcgO1HQWMmb9dqqDUD8IPu&protocol=oauth2&scope=openid%20profile%20email&response_type=code&redirect_uri=https%3A%2F%2Fui-automation-camp.vercel.app%2Fapi%2Fauth%2Fcallback&nonce=-J8KUALZwUiits3D5D9QHb5x3Cz67OatIK-6IVVc3Nc&code_challenge=UrOZWXWG2-G-bNwch33w47pWfBotnx9XpfAF9xFdGJg&code_challenge_method=S256' to equal 'https://ui-automation-camp.vercel.app/products'\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Checkout products`",
+                "estack": "AssertionError: Timed out retrying after 4000ms: expected 'https://dev-mlluudmotpwoldtv.us.auth0.com/login?state=hKFo2SB4SXNZWlNyVFZtcnRMVks0ZDZ4cjFrcG5UWVpKWVF4T6FupWxvZ2luo3RpZNkgb3NXSzg5OUlLRWJHZ0xGejNsRzJSb2dXQUV4UHh3N2WjY2lk2SBHbzVxVW16cTFLcWNnTzFIUVdNbWI5ZHFxRFVEOElQdQ&client=Go5qUmzq1KqcgO1HQWMmb9dqqDUD8IPu&protocol=oauth2&scope=openid%20profile%20email&response_type=code&redirect_uri=https%3A%2F%2Fui-automation-camp.vercel.app%2Fapi%2Fauth%2Fcallback&nonce=-J8KUALZwUiits3D5D9QHb5x3Cz67OatIK-6IVVc3Nc&code_challenge=UrOZWXWG2-G-bNwch33w47pWfBotnx9XpfAF9xFdGJg&code_challenge_method=S256' to equal 'https://ui-automation-camp.vercel.app/products'\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Checkout products`\n    at Context.eval (webpack:///./cypress/e2e/spec/checkout.cy.js:11:17)",
+                "diff": "- '\\'https://dev-mlluudmotpwoldtv.us.auth0.com/login?state=hKFo2SB4SXNZWlNyVFZtcnRMVks0ZDZ4cjFrcG5UWVpKWVF4T6FupWxvZ2luo3RpZNkgb3NXSzg5OUlLRWJHZ0xGejNsRzJSb2dXQUV4UHh3N2WjY2lk2SBHbzVxVW16cTFLcWNnTzFIUVdNbWI5ZHFxRFVEOElQdQ&client=Go5qUmzq1KqcgO1HQWMmb9dqqDUD8IPu&protocol=oauth2&scope=openid%20profile%20email&response_type=code&redirect_uri=https%3A%2F%2Fui-automation-camp.vercel.app%2Fapi%2Fauth%2Fcallback&nonce=-J8KUALZwUiits3D5D9QHb5x3Cz67OatIK-6IVVc3Nc&code_challenge=UrOZWXWG2-G-bNwch33w47pWfBotnx9XpfAF9xFdGJg&code_challenge_method=S256\\''\n+ '\\'https://ui-automation-camp.vercel.app/products\\''\n"
+              },
+              "uuid": "6cd11de7-1cbb-4b3e-ad71-a4f5ff0ade47",
+              "parentUUID": "ff8cc3be-b5dc-4a28-a7b9-fd767c0a97fc",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "6cd11de7-1cbb-4b3e-ad71-a4f5ff0ade47"
+          ],
+          "pending": [],
+          "skipped": [
+            "dfdc404a-8c34-41cd-9945-03daf11138d3",
+            "8bead9bc-704a-4298-8158-0b842b79ea97"
+          ],
+          "duration": 8433,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

@@ -1,0 +1,148 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2022-12-15T23:04:47.293Z",
+    "end": "2022-12-15T23:04:54.959Z",
+    "duration": 7666,
+    "testsRegistered": 3,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 2,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "f763fbe7-05a4-4390-a9b7-c78dbca7aba1",
+      "title": "",
+      "fullFile": "cypress\\e2e\\spec\\prods-gallery.cy.js",
+      "file": "cypress\\e2e\\spec\\prods-gallery.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "44d203f3-ff0c-468b-aa22-c4da41714125",
+          "title": "Cart interactions",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "verify content on the homepage",
+              "fullTitle": "Cart interactions verify content on the homepage",
+              "timedOut": null,
+              "duration": 7586,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(_homePage.default.pageHeaderTitle).should('have.text', 'Automation Camp Store');\ncy.get(_homePage.default.signOutBtn).should('have.text', 'Sign Out');\ncy.get(_homePage.default.productsTitle).should('have.text', 'Products');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: expected 'https://dev-mlluudmotpwoldtv.us.auth0.com/login?state=hKFo2SBoZGRmbDRpVmpsZkpQT2VNY09Gb2lIRmM1Qm5nQTF1VaFupWxvZ2luo3RpZNkgcmhNYk8tSmptcEZrMExIby1fX21nUmJEek1aSWFwRkijY2lk2SBHbzVxVW16cTFLcWNnTzFIUVdNbWI5ZHFxRFVEOElQdQ&client=Go5qUmzq1KqcgO1HQWMmb9dqqDUD8IPu&protocol=oauth2&scope=openid%20profile%20email&response_type=code&redirect_uri=https%3A%2F%2Fui-automation-camp.vercel.app%2Fapi%2Fauth%2Fcallback&nonce=pEJOLYeZ6fXtpME2OYg1dxVnnmALDIAupwVXR53AFkw&code_challenge=7jajnbYwRw8tiGMsnrZNN-MYF49-OVVna9ix7U1tImU&code_challenge_method=S256' to equal 'https://ui-automation-camp.vercel.app/products'\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Cart interactions`",
+                "estack": "AssertionError: Timed out retrying after 4000ms: expected 'https://dev-mlluudmotpwoldtv.us.auth0.com/login?state=hKFo2SBoZGRmbDRpVmpsZkpQT2VNY09Gb2lIRmM1Qm5nQTF1VaFupWxvZ2luo3RpZNkgcmhNYk8tSmptcEZrMExIby1fX21nUmJEek1aSWFwRkijY2lk2SBHbzVxVW16cTFLcWNnTzFIUVdNbWI5ZHFxRFVEOElQdQ&client=Go5qUmzq1KqcgO1HQWMmb9dqqDUD8IPu&protocol=oauth2&scope=openid%20profile%20email&response_type=code&redirect_uri=https%3A%2F%2Fui-automation-camp.vercel.app%2Fapi%2Fauth%2Fcallback&nonce=pEJOLYeZ6fXtpME2OYg1dxVnnmALDIAupwVXR53AFkw&code_challenge=7jajnbYwRw8tiGMsnrZNN-MYF49-OVVna9ix7U1tImU&code_challenge_method=S256' to equal 'https://ui-automation-camp.vercel.app/products'\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Cart interactions`\n    at Context.eval (webpack:///./cypress/e2e/spec/prods-gallery.cy.js:12:17)",
+                "diff": "- '\\'https://dev-mlluudmotpwoldtv.us.auth0.com/login?state=hKFo2SBoZGRmbDRpVmpsZkpQT2VNY09Gb2lIRmM1Qm5nQTF1VaFupWxvZ2luo3RpZNkgcmhNYk8tSmptcEZrMExIby1fX21nUmJEek1aSWFwRkijY2lk2SBHbzVxVW16cTFLcWNnTzFIUVdNbWI5ZHFxRFVEOElQdQ&client=Go5qUmzq1KqcgO1HQWMmb9dqqDUD8IPu&protocol=oauth2&scope=openid%20profile%20email&response_type=code&redirect_uri=https%3A%2F%2Fui-automation-camp.vercel.app%2Fapi%2Fauth%2Fcallback&nonce=pEJOLYeZ6fXtpME2OYg1dxVnnmALDIAupwVXR53AFkw&code_challenge=7jajnbYwRw8tiGMsnrZNN-MYF49-OVVna9ix7U1tImU&code_challenge_method=S256\\''\n+ '\\'https://ui-automation-camp.vercel.app/products\\''\n"
+              },
+              "uuid": "829754e4-4839-4dfd-acff-8c049f81d9d3",
+              "parentUUID": "44d203f3-ff0c-468b-aa22-c4da41714125",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should verify that the iframe has loaded",
+              "fullTitle": "Cart interactions should verify that the iframe has loaded",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(_homePage.default.youTubeVideo).should('be.visible'); // verifies that the YouTube video is visible on the page\ncy.frameLoaded(_homePage.default.iFrame, {\n  url: 'https://www.youtube.com/embed/JSda4u5jFFk'\n}); //verifies that the YouTube video in the iframe has loaded with the specified url",
+              "err": {},
+              "uuid": "129ce043-4a5a-4666-a86d-bc803c2b1964",
+              "parentUUID": "44d203f3-ff0c-468b-aa22-c4da41714125",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "should verify that the page can be reset after category selection",
+              "fullTitle": "Cart interactions should verify that the page can be reset after category selection",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(_products.default.categorySelect).select('laptop'); // selects the laptop option in the category field\ncy.get(_homePage.default.mackBookProTitle).should('have.text', 'Mackbook Pro'); //verifies that a laptop product has been returned\ncy.get(_homePage.default.resetBtn).click(); // resets the filtering that was done\ncy.get(_homePage.default.fittedHatTitle).should('have.text', 'Quality Fitted Hat'); // verifies that the reset was succesful",
+              "err": {},
+              "uuid": "17ef1758-7d06-422a-ba1c-e1fcc53ed2a1",
+              "parentUUID": "44d203f3-ff0c-468b-aa22-c4da41714125",
+              "isHook": false,
+              "skipped": true
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "829754e4-4839-4dfd-acff-8c049f81d9d3"
+          ],
+          "pending": [],
+          "skipped": [
+            "129ce043-4a5a-4666-a86d-bc803c2b1964",
+            "17ef1758-7d06-422a-ba1c-e1fcc53ed2a1"
+          ],
+          "duration": 7586,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
