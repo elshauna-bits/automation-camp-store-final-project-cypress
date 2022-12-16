@@ -1,13 +1,13 @@
 module.exports = {
-  
+
     products: 
     [{
         name: 'Dell Laptop',
-        price: '20'
+        price: '1000'
     },
     {
         name: 'Gray Couch',
-        price: '1000'
+        price: '550'
     },
     {
         name: 'HP Laptop',
@@ -15,11 +15,11 @@ module.exports = {
     },
     {
         name: 'Mackbook Pro',
-        price: '20'
+        price: '2000'
     },
     {
         name: 'Quality Blue Shoes',
-        price: '550'
+        price: '20'
     },
     {
         name: 'Quality Cargo Pants',
@@ -40,11 +40,11 @@ module.exports = {
     },
     {
         name:'Quality Jeans Pants',
-        price:'15'
+        price:'28'
     },
     {
         name:'Quality Kids Tshirt',
-        price:'24'
+        price:'15'
     },
     {
         name:'Quality Mousepad',
@@ -60,19 +60,19 @@ module.exports = {
     },
     {
         name:'Quality Pink Pants',
-        price:''
-    },
-    {
-        name:'Quality Stylish Shoes',
         price:'44'
     },
     {
+        name:'Quality Stylish Shoes',
+        price:'20'
+    },
+    {
         name:'Quality Sweatshirt',
-        price:'320'
+        price:'40'
     },
     {
         name:'Quality Trucker Hat',
-        price:'40'
+        price:'24'
     },
     {
         name:'Quality Tshirt',
@@ -85,7 +85,7 @@ module.exports = {
 
     {
         name:'Red Couch',
-        price:'20'
+        price:'320'
     },
     {
         name:'White Couch',
