@@ -5,14 +5,15 @@ describe('Contact Page',()=>{
     beforeEach(()=>{
         auth.login()
         cy.wait(6000) 
+ 
         cy.get(contact.contactPage).click()
         cy.wait(5000)
     })
-    it('should verify that the email address is correct',()=>{
+    xit('should verify that the email address is correct',()=>{
 
         cy.get(contact.emailAddress).should('have.text','info@qualityworkscg.com')// should verify that the email address on the contact page is correct
     })
-    it('should send a message',()=>{
+    xit('should send a message',()=>{
         contact.sendMessage("Ky","Levy","kylev@mail.com","Bootcamp","When does it start?")// sends  a message 
         cy.wait(5000)
         cy.get(contact.confirmation).should('be.visible')//checks if the message sent notification is visiblw
