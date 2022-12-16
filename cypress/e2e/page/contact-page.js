@@ -27,7 +27,7 @@ get confirmation(){
     return cy.get('#toast-1')
 }
 get emailError(){
-    return cy.get('#field-\:r4\:-feedback')
+    return cy.get("//div[@id='field-:r8:-feedback']")
 }
 sendMessage(firstName,lastName,emailField,subject,message){
     cy.get(this.firstName).type(firstName)
