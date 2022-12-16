@@ -4,10 +4,8 @@ import sort from "../page/sort"
 
 describe('Search for products',()=>{
     beforeEach(()=>{
-        cy.visit('/')
-        auth.signInOrRegister()
-        //auth.login("pain@mail.com","P@$$w0rd!")
-        cy.url().should('eq','https://ui-automation-camp.vercel.app/products')
+        auth.login()
+        cy.wait(6000)
     })
     it('should search for an item which returns one result',()=>{
         cy.get(products.searchOpt).type('mug')//should search for a product with mug in the name
