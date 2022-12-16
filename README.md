@@ -2,7 +2,7 @@
 This is the final project for the UI Automation Testing Bootcamp.
 
 # Getting started
-Execute the following command: npm install to install the dependencies
+Execute the following command: `npm install` to install the dependencies
 
 # Folders
 - The cypress/e2e/data folder contains the array of data  for the sorting and filter test script
