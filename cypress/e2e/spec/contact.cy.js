@@ -3,19 +3,9 @@ import contact from "../page/contact-page"
 
 describe('Contact Page',()=>{
     beforeEach(()=>{
-        cy.visit('/')
-        cy.get('#signInOrRegister').click();
-
-        cy.origin(
-            "https://dev-mlluudmotpwoldtv.us.auth0.com",
-            { args: {} },
-            ({}) => {
-                cy.get('li[class="auth0-lock-tabs-current"]');
-                cy.get('input[name="email"]').type('annxsivan@gmail.com');
-                cy.get('input[name="password"]').type('P@ssword12');
-                cy.get('button[id="1-submit"]').click();
-                }
-        );  
+        auth.login()
+        cy.wait(6000) 
+ 
         cy.get(contact.contactPage).click()
         cy.wait(5000)
     })
