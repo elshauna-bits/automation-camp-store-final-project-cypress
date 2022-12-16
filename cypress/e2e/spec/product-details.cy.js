@@ -1,6 +1,6 @@
 import auth from "../page/auth"
 import prodDetails from "../page/prod-details"
-import homePage from "../page/home-page"
+
 
 describe('Product details',()=>{
     beforeEach(()=>{
