@@ -1,13 +1,10 @@
 import auth from "../page/auth"
 import prodDetails from "../page/prod-details"
-import homePage from "../page/home-page"
+
 
 describe('Product details',()=>{
     beforeEach(()=>{
-        cy.visit('/')
-        auth.signInOrRegister()
-        //auth.login("pain@mail.com","P@$$w0rd!")
-        cy.url().should('eq','https://ui-automation-camp.vercel.app/products')
+        auth.login()
         prodDetails.viewQualityMugPage()
         cy.wait(6000)
     })

@@ -5,14 +5,10 @@ import products from "../page/products"
 
 describe('Checkout products',()=>{
     beforeEach(()=>{
-        cy.visit('/')
-        auth.signInOrRegister()
-        //auth.login("pain@mail.com","P@$$w0rd!")
-        cy.url().should('eq','https://ui-automation-camp.vercel.app/products')
-        cy.clearCookies()
+        auth.login()
         cy.wait(8000)
     }) 
-    xit('should checkout one product',()=>{
+    it('should checkout one product',()=>{
         products.addOneItemToCart()
         cy.wait(3000)
         checkout.checkoutProduct("Mia Miller","mm@mail.com","34 Daisy Street","1","Raleigh","Jamaica","Kingston","27607")
@@ -22,7 +18,7 @@ describe('Checkout products',()=>{
         checkout.payment()
         cy.get(checkout.successMessage).should('have.text','Thank you for your order')
     })   
-    xit('should checkout multiple products',()=>{
+    it('should checkout multiple products',()=>{
         products.addMultipleItemsToCart()
         cy.wait(3000)
         checkout.checkoutProduct("Mia Miller","mm@mail.com","34 Daisy Street","1","Raleigh","Jamaica","Kingston","27607")

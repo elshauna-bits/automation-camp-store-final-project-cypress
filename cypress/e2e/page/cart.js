@@ -21,16 +21,19 @@ class Cart {
     increaseItemQuantity(){
        cy.wait(6000)
        cy.get(this.cartIcon).click()
+       cy.wait(6000)
        cy.get(this.increaseQuantity).click() 
     }
     decreaseItemQuantity(){
         cy.wait(6000)
         cy.get(this.cartIcon).click()
+        cy.wait(6000)
         cy.get(this.decreaseQuantity).click()
     }
     deleteItemFromCart(){
         cy.wait(6000)
         cy.get(this.cartIcon).click()
+        cy.wait(6000)
         cy.get(this.deleteItem).click()
     }
 }
