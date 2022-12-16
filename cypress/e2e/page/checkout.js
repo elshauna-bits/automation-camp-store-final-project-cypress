@@ -38,9 +38,6 @@ get expiryDate(){
 get cvv(){
     return('input[name="cvv"]')
 }
-get placeOrderBtn(){
-    return cy.get('.snipcart-button-primary').click({force: true})
-}
 get successMessage(){
     return(`div[class='snipcart__box--title'] div h1[class='snipcart__font--subtitle']`)
 }
@@ -64,7 +61,7 @@ checkoutProduct(fullName,email,streetAddress,aptOrSuite,city,country,provinceOrS
     cy.wait(4000)
     cy.get(this.provinceOrState).type(provinceOrState,{force:true})
     cy.get(this.postalCode).type(postalCode)
-    //continuetoPaymentBtn.click()
+    
 }
 payment(){
     cy.iframe('.snipcart-payment-card-form iframe').find(this.cardNumber).type('4242 4242 4242 4242')
@@ -84,7 +81,7 @@ checkoutProductWithoutEmail(fullName,streetAddress,aptOrSuite,city,country,provi
     cy.wait(4000)
     cy.get(this.provinceOrState).type(provinceOrState,{force:true})
     cy.get(this.postalCode).type(postalCode)
-    //continuetoPaymentBtn.click()
+    
 }
 editCart(){
     cy.get(this.editBtn).click()
