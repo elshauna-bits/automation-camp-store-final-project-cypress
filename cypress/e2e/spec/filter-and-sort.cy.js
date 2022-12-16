@@ -20,11 +20,11 @@ describe('Filter and sort products',()=>{
 
         cy.get(sort.productNames).each(($elem,index) =>{
             //expect($elem.text()).equal(qualityProducts[index])
-            expect($elem.text()).equal(items.products[index].name)
+            expect($elem.text()).equal(items.products[index].name)//checks the records data/items.js file are equal to the results returned after sorting from A to Z
         })
     })
 
-    xit('should sort from Z to A',()=>{
+    it('should sort from Z to A',()=>{
         cy.get(products.sortSelect).select('zToA')
         const qualityProducts = ['Dell Laptop','Gray Couch','HP Laptop','Mackbook Pro','Quality Blue Shoes','Quality Cargo Pants','Quality Fitted Hat',
         'Quality Heal Shoes','Quality Hooded Sweatshirt','Quality Jeans Pants','Quality Kids Tshirt','Quality Mousepad','Quality Mug','Quality Pillow',
