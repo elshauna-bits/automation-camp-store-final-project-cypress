@@ -1,17 +1,27 @@
 class Favourites{
-    get fittedHatFav(){
-        return ("//div[@id='product-0']//div[@class='css-1m8iww1']//*[name()='svg']")
+    get addFittedHatToFav(){
+        return ('#product-0 > .css-n21gh5 > .css-46p1lt > .css-1oeb4ru #add-to-favorite')
     }
-    get mousepadFav(){
-        return("//div[@id='product-2']//div[@class='css-1m8iww1']//*[name()='svg']")
+    get addMousepadToFav(){
+        return("#product-1 > .css-n21gh5 > .css-46p1lt > .css-1oeb4ru #add-to-favorite")
+    }
+    get addQualityMugToFav(){
+        return('#add-to-favorite')
     }
     get favouritesBtn(){
         return("#top-favorite")
     }
-
-
-    addOneItemToFavs(){
-    cy.get(this.fittedHatFav).click()    
+    get removeFittedHatFromFav(){
+        return('#product-0 > .css-n21gh5 > .css-46p1lt > .css-1oeb4ru #remove-from-favorite > path')
     }
+    get favPageText(){
+        return('.chakra-text.css-jneyc')
+    }
+    get removeBtn(){
+        return("#remove-favorite-btn")
+    }
+
+
+   
 
 }export default new Favourites()
